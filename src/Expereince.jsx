@@ -11,10 +11,12 @@ import {
   Scroll,
   ScrollControls,
   Sky,
+  Stars,
 } from "@react-three/drei";
 import { Bike } from "./Bike";
 import { useContext } from "react";
 import { TextContext } from "./context";
+import { Pole } from "./pole";
 
 const Expereince = () => {
   const {title} = useContext(TextContext)
@@ -29,6 +31,8 @@ const Expereince = () => {
       />
       <ambientLight intensity={1} />
       {title==="style"&&<ambientLight intensity={10} />}
+      {title==="scene"&&<fog color={"black"} far={10} near={2}  />}
+      {title==="scene"&&<Pole position={[2,-1,-1]} />}
       <directionalLight intensity={5} position={[1, 1, 5]} />
       <ScrollControls pages={1} distance={20}>
         <Scroll>

@@ -119,15 +119,15 @@ const Home = () => {
           </h1>
           <div className="text-lg">
             <p>
-              <strong>.</strong>Lightweight yet robust carbon fiber frames for
+              Lightweight yet robust carbon fiber frames for
               agile handling and durability
             </p>
             <p>
-              <strong>.</strong>Advanced precision gear shifting for seamless
+              Advanced precision gear shifting for seamless
               transitions on any terrain.
             </p>
             <p>
-              <strong>.</strong>Enhanced shock absorption technology for a
+              Enhanced shock absorption technology for a
               smooth and comfortable ride
             </p>
           </div>

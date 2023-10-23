@@ -13,3 +13,12 @@
 .title {
   font-family: "Bebas Neue", sans-serif;
 }
+::-webkit-scrollbar{
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: red;
+}
+::-webkit-scrollbar-track {
+  background: #e5e7ea;
+}

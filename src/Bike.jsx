@@ -16,16 +16,17 @@ export function Bike(props) {
     if(scroll.offset>0.4&&scroll.offset<0.5){group.current.position.z = scroll.offset*18;group.current.position.x=-scroll.offset*3;group.current.position.y=scroll.offset*0.01;group.current.rotation.y=0;stopAnimation();setTitle("tyres")}
     if(scroll.offset>0.5&&scroll.offset<0.6){group.current.position.x=-0.2;group.current.position.y=-scroll.offset*2;group.current.position.z=2;group.current.rotation.y=scroll.offset*Math.PI;setTitle("style")}
     if(scroll.offset>0.6&&scroll.offset<0.65){group.current.rotation.y=scroll.offset*Math.PI*1.7;setTitle("")}
-    if(scroll.offset>0.65&&scroll.offset<0.7){group.current.position.x=scroll.offset*4;setTitle("features")}
-
-
+    if(scroll.offset>0.65&&scroll.offset<0.75){group.current.position.x=scroll.offset*4;setTitle("features")}
+    if(scroll.offset>0.75){group.current.position.x=0;setTitle("scene")}
   })
   const playAnimation = ()=>{
+    console.log(actions["Explosion View"].time)
     actions["Explosion View"].play()
   }
   const stopAnimation = ()=>{
     actions["Explosion View"].stop()
   }
+  // useEffect(() => void (actions["Explosion View"].reset().play().paused = true), [])
   return (
     <group ref={group} {...props} dispose={null} scale={2} position={[0,-1,0]}>
       <group name="Sketchfab_Scene">
