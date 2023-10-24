@@ -17,7 +17,8 @@ export function Bike(props) {
     if(scroll.offset>0.5&&scroll.offset<0.6){group.current.position.x=-0.2;group.current.position.y=-scroll.offset*2;group.current.position.z=2;group.current.rotation.y=scroll.offset*Math.PI;setTitle("style")}
     if(scroll.offset>0.6&&scroll.offset<0.65){group.current.rotation.y=scroll.offset*Math.PI*1.7;setTitle("")}
     if(scroll.offset>0.65&&scroll.offset<0.75){group.current.position.x=scroll.offset*4;setTitle("features")}
-    if(scroll.offset>0.75){group.current.position.x=0;setTitle("scene")}
+    if(scroll.offset>0.75&&scroll.offset<0.8){group.current.position.x=-scroll.offset*2;setTitle("scene")}
+    if(scroll.offset>0.75){group.current.position.x=0;}
   })
   const playAnimation = ()=>{
     console.log(actions["Explosion View"].time)

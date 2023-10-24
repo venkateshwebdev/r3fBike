@@ -31,7 +31,7 @@ const Expereince = () => {
       />
       <ambientLight intensity={1} />
       {title==="style"&&<ambientLight intensity={10} />}
-      {title==="scene"&&<fog color={"black"} far={10} near={2}  />}
+      {title==="scene"&&<Stars />}
       {title==="scene"&&<Pole position={[2,-1,-1]} />}
       <directionalLight intensity={5} position={[1, 1, 5]} />
       <ScrollControls pages={1} distance={20}>

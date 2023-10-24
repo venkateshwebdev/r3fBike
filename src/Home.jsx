@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const Home = () => {
   const { title } = useContext(TextContext);
   return (
-    <main className="absolute min-h-[100vh] w-full bg-gray-200 top-0 p-16 overflow-hidden flex flex-col items-center justify-center">
+    <main className={`absolute min-h-[100vh] w-full bg-gray-200 top-0 p-16 overflow-hidden flex flex-col items-center justify-center ${title==="scene"&&"bg-[#555555]"}`}>
       {title === "title" && (
         <motion.div
           initial={{ y: -100, opacity: 0 }}
@@ -91,7 +91,7 @@ const Home = () => {
           >
             <h1 className="text-5xl font-bold title">
               "Beyond Aesthetics: Where Form and Function Merge in Perfect
-              Harmony"{" "}
+              Harmony".
             </h1>
             <p className="text-lg">
               Embrace a bicycle that goes beyond aesthetics, where every curve
